@@ -1,0 +1,236 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?r2ev6s');
+  src:  url('fonts/icomoon.eot?r2ev6s#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?r2ev6s') format('truetype'),
+    url('fonts/icomoon.woff?r2ev6s') format('woff'),
+    url('fonts/icomoon.svg?r2ev6s#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-settings:before {
+  content: "\e900";
+}
+.icon-home:before {
+  content: "\e901";
+}
+.icon-fire:before {
+  content: "\e902";
+}
+.icon-heart:before {
+  content: "\e903";
+}
+
+body
+{
+  font-family: 'Roboto';
+  margin: 0;
+}
+.wrapper
+{
+  display: grid;
+  grid-template: 70px 1fr / 70px 1fr 1fr 1fr;
+  grid-template-areas: "header header header header"
+                       "menu contenido contenido contenido";
+}
+
+header
+{
+  grid-area: header;
+  border: 1px solid red;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.header
+{
+  display: grid;
+  grid-template: 70px / [inicio] 1fr [logo-end] 1.2fr [barra-end] 0.8fr [final];
+  align-items: center;
+}
+
+.logo
+{
+  grid-column: inicio / logo-end;
+}
+
+.logo figure
+{
+  margin: 0;
+}
+
+.logo figure img
+{
+  width: 30%;
+}
+
+form
+{
+  grid-column: logo-end / barra-end;
+  align-items: center;
+}
+
+form input
+{
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: .2em;
+}
+
+.user
+{
+  grid-column: barra-end / final;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: center;
+}
+
+.user p
+{
+  font-size: 1em;
+  text-align: center;
+  margin: auto 0;
+}
+
+.user-imageWrapper
+{
+  margin-left: 0;
+}
+.user-image
+{
+  width: 30%;
+  border-radius: 50%;
+}
+
+.menu
+{
+  grid-area: menu;
+  border: 1px solid red;
+  background: linear-gradient(to left, #ea545d, #ee726a);
+  text-align: center;
+  display: flex;
+}
+
+.menu a
+{
+  text-decoration: none;
+  color: white;
+}
+
+.menu a i
+{
+  font-size: 1.8em;
+}
+
+.menu a p
+{
+  font-size: .8em;
+  font-weight: bold;
+}
+.movies
+{
+  grid-area: contenido;
+  border: 1px solid red;
+  padding: 0 3em 3em 3em;
+}
+
+.cinema-list
+{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2em;
+}
+
+.movies-item
+{
+  grid-column: 1 / 2;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.movies-item2
+{
+  grid-column: 2 / 3;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.movies-item3
+{
+  grid-column: 3 / 4;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.movies-imageWrapper
+{
+  margin: 0;
+}
+
+.movies-image
+{
+  width: 100%;
+  margin-bottom: -1em;
+}
+
+.movies-description
+{
+  background: rgba(234, 84, 93, 0.80);
+  color: white;
+  position: absolute;
+  bottom:0;
+  padding: .5em 1em;
+  height: 46.3%;
+}
+
+.movies-description h3
+{
+  margin: 0;
+  font-size: 1em;
+  margin-bottom: .2em;
+}
+
+.movies-description p
+{
+  margin: 0;
+  font-size: .6em;
+}
+
+h2
+{
+  font-size: 1em;
+  margin-top: 2em;
+}
+
+.critics-list
+{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2em;
+}
+
+.recommended-list
+{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2em;
+}
