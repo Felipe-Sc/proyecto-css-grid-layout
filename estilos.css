@@ -76,6 +76,7 @@ header
 .logo figure img
 {
   width: 30%;
+  margin: 2em;
 }
 
 form
@@ -103,13 +104,13 @@ form input
 .user p
 {
   font-size: 1em;
-  text-align: center;
+  text-align: end;
   margin: auto 0;
 }
 
 .user-imageWrapper
 {
-  margin-left: 0;
+  margin-left: .5em;;
 }
 .user-image
 {
